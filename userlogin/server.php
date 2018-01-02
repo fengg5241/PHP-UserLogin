@@ -65,4 +65,61 @@ if (isset($_POST['login_user'])) {
   }
 }
 
+
+// SEARCH USER
+if (isset($_POST['action'])) {
+    $action = mysqli_real_escape_string($db, $_POST['action']);
+    if($action == "search"){
+        // receive all input values from the form
+        $searchText = mysqli_real_escape_string($db, $_POST['searchText']);
+
+        $query = "SELECT * FROM users WHERE name='$username' or age='$username'";
+        //$query = "SELECT * FROM users WHERE username like '%$username%' or age='%$username%'";
+
+        $results = mysqli_query($db, $query);
+        $users = array();
+        while ($row = mysqli_fetch_assoc($results)){
+        $user = array(
+            "id"=>$row["id"],
+            "name"=>$row["name"],
+            "age"=>$row["age"]
+        );
+        array_push($users,$user);
+        }
+
+        header('Content-Type: application/json');
+        echo json_encode($users);
+    }
+
+    if($action == "edit"){
+        $id = mysqli_real_escape_string($db, $_POST['id']);
+        $name = mysqli_real_escape_string($db, $_POST['name']);
+        $age = mysqli_real_escape_string($db, $_POST['age']);
+
+        $query = "UPDATE users set name='$name',age='$age' where $id='$id' ;
+        $result = mysqli_query($db, $query);
+        if(mysqli_affected_rows($result) == 1 ){ // Successful
+           echo("successful");
+        }
+        else{
+            echo("fail");
+        }
+    }
+
+    if($action == "searchById"){
+        $id = mysqli_real_escape_string($db, $_POST['id']);
+
+        $query = "SELECT * FROM users where $id='$id' ;
+        $result = mysqli_query($db, $query);
+        $row = mysqli_fetch_assoc($results);
+
+        $user = array(
+                    "id"=>$row["id"],
+                    "name"=>$row["name"],
+                    "age"=>$row["age"]
+                );
+        echo json_encode($user);
+    }
+}
+
 ?>
