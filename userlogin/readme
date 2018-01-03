@@ -3,3 +3,15 @@ http://www.blogxuan.com/mysql/show/7.html
 
 
 https://docs.bitnami.com/google/faq/#obtaining-your-ssh-credentials-from-the-bitnami-launchpad
+
+
+<?php  
+    $url = 'CALL_ME_WHY';    //定义变量  
+?>  
+<script type="text/javascript">  
+    //js调用php变量  
+    var ds ="<?php echo $url?>" ; //赋值  
+    alert(ds); //输出效果  
+</script>  
+
+	
