@@ -14,4 +14,8 @@ https://docs.bitnami.com/google/faq/#obtaining-your-ssh-credentials-from-the-bit
     alert(ds); //输出效果  
 </script>  
 
+
+vs AZURE
+https://docs.microsoft.com/zh-cn/azure/sql-database/sql-database-connect-query-vscode
+
 	
