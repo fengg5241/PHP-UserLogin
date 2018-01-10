@@ -21,6 +21,12 @@ https://docs.microsoft.com/zh-cn/azure/sql-database/sql-database-connect-query-v
 可视化azure
 https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-manage-with-storage-explorer
 
+使用 .NET (C#) 和 Visual Studio 来连接和查询 Azure SQL 数据库
+https://docs.microsoft.com/zh-cn/azure/sql-database/sql-database-connect-query-dotnet-visual-studio
+
+设计 Azure SQL 数据库，并使用 C# 和 ADO.NET 进行连接
+https://docs.microsoft.com/zh-cn/azure/sql-database/sql-database-design-first-database-csharp
+
 sql 注入
 https://www.jianshu.com/p/954564cf5faf
 
@@ -30,7 +36,6 @@ http://blog.csdn.net/clin003/article/details/1491157
 10个SQL注入工具
 http://blog.jobbole.com/17763/
 
-使用 .NET (C#) 和 Visual Studio 来连接和查询 Azure SQL 数据库
-https://docs.microsoft.com/zh-cn/azure/sql-database/sql-database-connect-query-dotnet-visual-studio
+
 
 	
