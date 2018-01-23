@@ -59,7 +59,7 @@ https://www.w3schools.com/php/php_file_upload.asp
 
 login session 例子
 https://www.youtube.com/watch?v=6DB6_gStuOk
-webservice EnableSession=true
+[WebMethod(EnableSession = true)]
 http://vcsos.com/article/pageSource/140725/20140725200519.shtml
 
 
