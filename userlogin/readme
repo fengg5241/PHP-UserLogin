@@ -59,3 +59,22 @@ https://www.w3schools.com/php/php_file_upload.asp
 
 login session 例子
 https://www.youtube.com/watch?v=6DB6_gStuOk
+webservice EnableSession=true
+http://vcsos.com/article/pageSource/140725/20140725200519.shtml
+
+
+你把代码写在了网页打开的时候，session肯定是NULL。这样写。
+protected void Page_Load(object sender, EventArgs e)
+{
+if(Page.isPostBack)
+return;
+if (Session["username"] != null)
+{
+Response.Write("<script>alert('1');</script>");
+Label1.Text = "欢迎用户," + Session["username"].ToString();
+}
+else
+{
+Response.Write("<script>alert('2');</script>");
+}
+}
